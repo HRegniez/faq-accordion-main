@@ -14,7 +14,7 @@ function App() {
           <h1>FAQs</h1>
         </div>
 
-        <ul>
+        <ul className='faq'>
           {
             faqData.map((faq, index) =>  (
               <Faq key={index} question={faq.question} response={faq.response}/>

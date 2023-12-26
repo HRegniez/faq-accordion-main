@@ -1,8 +1,14 @@
+@import './settings.sass'
 *
     box-sizing: border-box
     margin: 0
     padding: 0
-    
+    font-family: $font
+    font-size: 16px
+h1, h2
+    color: $color-dark-purple
+p
+    color: $color-gray-purple
 main
     width: 100svw
     height: 100svh
@@ -14,3 +20,27 @@ main
 section 
     background-color: white
     margin: 1rem
+    padding: 1rem
+    border-radius: 1rem
+.title
+    display: flex
+    gap: 1rem
+    margin: 1rem 0
+    align-items: center
+    h1
+        font-size: 2rem
+    img
+        width: 1.2rem
+.faq
+    li
+        list-style-type: none
+        border-bottom: 1px solid $color-gray-purple
+    &_question
+        display: flex
+        justify-content: space-between
+        gap: 1rem
+        margin: 1rem 0
+    p
+        margin-bottom: 1rem
+        font-weight: 600
+    

@@ -3,9 +3,9 @@ function Faq({question, response}) {
     
   return (
     <li>
-        <div>
+        <div className="faq_question">
           <h2>{question}</h2>
-          <img src="" alt="" />
+          <img src="../images/icon-plus.svg" alt="more info icon" />
         </div>
         <div>
           <p>
