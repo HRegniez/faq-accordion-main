@@ -43,4 +43,11 @@ section
     p
         margin-bottom: 1rem
         font-weight: 600
+    &_response
+        max-height: 0rem
+        overflow: hidden
+        transition: max-height 1s ease
+        &.open
+            max-height: none
+            transition: max-height 1s ease
     
