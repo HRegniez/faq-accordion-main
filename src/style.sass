@@ -19,7 +19,7 @@ main
     justify-content: center
 section 
     background-color: white
-    margin: 1rem
+    margin: auto 1rem
     padding: 1rem
     border-radius: 1rem
 .title
@@ -44,10 +44,11 @@ section
         margin-bottom: 1rem
         font-weight: 600
     &_response
-        max-height: 0rem
+        max-height: 0
         overflow: hidden
-        transition: max-height 1s ease
+        transition: all 0.4s ease
         &.open
-            max-height: none
-            transition: max-height 1s ease
+            max-height: 9999px
+            height: auto
+            transition: all 0.4s ease
     

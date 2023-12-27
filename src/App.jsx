@@ -1,9 +1,17 @@
+import { useState } from 'react'
 import './style.sass'
 import faqData from './data.json'
-import Faq from './components/Faq'
+
 
 function App() {
-  console.log(faqData)
+  const [selected, setSelected] = useState(null)
+
+  const toggle = (i) => {
+    if(selected === i){
+      return setSelected(null)
+    }
+    setSelected(i)
+  }
 
   return (
     <main>
@@ -17,7 +25,17 @@ function App() {
         <ul className='faq'>
           {
             faqData.map((faq, index) =>  (
-              <Faq key={index} question={faq.question} response={faq.response}/>
+              <li key={index}>
+                <div className="faq_question" onClick={() => toggle(index)}>
+                  <h2>{faq.question}</h2>
+                  <img src={ selected === index ? "../images/icon-plus.svg" : "../images/icon-minus.svg"} alt="more info icon" />
+                </div>
+                <div className={`faq_response ${ selected === index ? "open" : ""}`}>
+                  <p>
+                    {faq.response}
+                  </p>
+                </div>
+            </li>
             ))
           }
         </ul>
