@@ -28,14 +28,14 @@ function App() {
               <li key={index}>
                 <div className="faq_question" onClick={() => toggle(index)}>
                   <h2>{faq.question}</h2>
-                  <img src={ selected === index ? "../images/icon-plus.svg" : "../images/icon-minus.svg"} alt="more info icon" />
+                  <img src={ selected === index ? "../images/icon-minus.svg" : "../images/icon-plus.svg"  } alt="more info icon" />
                 </div>
-                <div className={`faq_response ${ selected === index ? "open" : ""}`}>
+                <div className={`faq_response ${ selected === index ? "open" : "close"}`}>
                   <p>
                     {faq.response}
                   </p>
                 </div>
-            </li>
+              </li>
             ))
           }
         </ul>

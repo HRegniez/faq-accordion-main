@@ -19,7 +19,7 @@ main
     justify-content: center
 section 
     background-color: white
-    margin: auto 1rem
+    margin: 25% 1rem auto
     padding: 1rem
     border-radius: 1rem
 .title
@@ -34,21 +34,31 @@ section
 .faq
     li
         list-style-type: none
+        
+    li:not(:last-child)
         border-bottom: 1px solid $color-gray-purple
     &_question
         display: flex
         justify-content: space-between
         gap: 1rem
         margin: 1rem 0
+        cursor: pointer
     p
         margin-bottom: 1rem
         font-weight: 600
     &_response
-        max-height: 0
-        overflow: hidden
-        transition: all 0.4s ease
+        &.close
+            max-height: 0px
+            transform: scaleY(0%)
+            transform-origin: top
+            overflow: hidden
+            transition: all 0.5s cubic-bezier(0, 1, 0, 1)
+
         &.open
-            max-height: 9999px
+            transform: scaleY(100%)
             height: auto
-            transition: all 0.4s ease
+            transform-origin: top
+            max-height: 999px
+            transition: all 1.5s cubic-bezier(0, 1, 0, 1)
+
     
